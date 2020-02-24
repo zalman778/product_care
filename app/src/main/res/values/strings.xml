@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Product Care</string>
+
+    <!--    common-->
+    <string name="retry_value">Retry</string>
+
+    <!--    home fragment   -->
+    <string name="panelQrReaderTitle"><b>QR Reader</b></string>
+    <string name="panelStorageTitle"><b>Storage</b></string>
+    <string name="panelSettingsTitle"><b>Settings</b></string>
+
+    <!--    signup fragment -->
+    <string name="sf_btn_signup">Sign Up</string>
+
+    <!--    bottom menu -->
+    <string name="bm_home">Home</string>
+    <string name="bm_dashboard">Dashboard</string>
+
+    <!--    preferences -->
+    <string name="kkt_name">KKT Phone</string>
+    <string name="kkt_name_desc">Phone number for KKT service</string>
+    <string name="kkt_password">KKT Password</string>
+    <string name="kkt_password_desc">...</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="test_long">Hello blank fragment, Hello blank fragment, Hello blank fragment, Hello blank fragmentHello blank fragment, Hello blank fragment, Hello blank fragment, Hello blank fragmentHello blank fragment, Hello blank fragment, Hello blank fragment, Hello blank fragmentHello blank fragment, Hello blank fragment, Hello blank fragment, Hello blank fragmentHello blank fragment, Hello blank fragment, Hello blank fragment, Hello blank fragmentHello blank fragment, Hello blank fragment, Hello blank fragment, Hello blank fragmentHello blank fragment, Hello blank fragment, Hello blank fragment, Hello blank fragmentHello blank fragment, Hello blank fragment, Hello blank fragment, Hello blank fragmentHello blank fragment, Hello blank fragment, Hello blank fragment, Hello blank fragmentHello blank fragment, Hello blank fragment, Hello blank fragment, Hello blank fragmentHello blank fragment, Hello blank fragment, Hello blank fragment, Hello blank fragment</string>
+    <string name="btn_swipe_del_title">Delete</string>
+    <string name="btn_swipe_mute_title">Mute</string>
+</resources>

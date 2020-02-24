@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.hwx.productcare.feature.home.ui.fragment.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_signUpFragment"
+            app:destination="@id/navigation_signup"
+            />
+        <action
+            android:id="@+id/action_homeFragment_to_qrScannerFragment"
+            app:destination="@id/navigation_qr_scanner"
+            />
+        <action
+            android:id="@+id/action_homeFragment_to_storageFragment"
+            app:destination="@id/navigation_storage"
+            />
+        <action
+            android:id="@+id/action_homeFragment_to_kktPrefsFragment"
+            app:destination="@id/navigation_kkt_preferences"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_signup"
+        android:name="com.hwx.productcare.feature.kkt.ui.fragment.SignUpFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_signup"
+        >
+        <action
+            android:id="@+id/action_signup_to_signup_confirmation"
+            app:destination="@id/navigation_signup_confirmation"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_signup_confirmation"
+        android:name="com.hwx.productcare.feature.kkt.ui.fragment.SignUpConfirmationFragment"
+        android:label="Sign Up Confirmation"
+        tools:layout="@layout/fragment_signup_confirmation"
+        >
+        <action
+            android:id="@+id/action_navigation_signup_confirmation_to_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_kkt_preferences"
+        android:name="com.hwx.productcare.feature.kkt.ui.fragment.KktPreferencesFragment"
+        android:label="Kkt Preferences" />
+
+
+    <fragment
+        android:id="@+id/navigation_qr_scanner"
+        android:name="com.hwx.productcare.feature.kkt.ui.fragment.QrCodeReaderFragment"
+        android:label="QR Scanner"
+        tools:layout="@layout/fragment_qr_scanner">
+        <action
+            android:id="@+id/action_navigation_qr_scanner_to_navigation_product_recieve"
+            app:destination="@id/navigation_product_recieve" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_product_recieve"
+        android:name="com.hwx.productcare.feature.kkt.ui.fragment.ProductReceiveFragment"
+        android:label="Product Receive"
+        tools:layout="@layout/fragment_receive_product">
+        <argument
+            android:name="scanned_receipt"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_navigation_product_recieve_to_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_storage"
+        android:name="com.hwx.productcare.feature.home.ui.fragment.ProductStorageFragment"
+        android:label="QR Scanner"
+        tools:layout="@layout/fragment_product_storage">
+        <action
+            android:id="@+id/action_storage_to_receipt_details"
+            app:destination="@id/navigation_receipt_details" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_receipt_details"
+        android:name="com.hwx.productcare.feature.home.ui.fragment.ReceiptDetailsFragment"
+        android:label="Product Receive"
+        tools:layout="@layout/fragment_receipt_details">
+        <argument
+            android:name="receipt_id"
+            app:argType="long" />
+    </fragment>
+
+</navigation>

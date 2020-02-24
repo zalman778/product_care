@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:transitionName="rlSettingsWrapper"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rootSettingsLayout"
+        tools:context=".feature.home.ui.fragment.HomeFragment"
+        android:background="#FFFFFF"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rlSettingHeader"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:elevation="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/ivSettingsTitle"
+                android:transitionName="ivSettingsHeader"
+                android:src="@drawable/shape_rv_list_item_rounded_background"
+                android:tint="@color/colorPrimaryText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                tools:ignore="ContentDescription"
+                />
+
+            <TextView
+                android:transitionName="tvSettingsTitle"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textSize="40sp"
+                android:text="@string/panelSettingsTitle"
+                tools:text="@string/panelSettingsTitle"/>
+
+
+        </RelativeLayout>
+
+        <!-- Required ViewGroup for PreferenceFragmentCompat -->
+        <FrameLayout
+            android:layout_marginTop="80dp"
+            android:id="@android:id/list_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+    </RelativeLayout>
+</layout>

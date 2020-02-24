@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="homeViewModel"
+            type="com.hwx.productcare.feature.home.viewmodel.HomeViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rootHomeLayout"
+        tools:context=".feature.home.ui.fragment.HomeFragment"
+        android:background="#4B4B4B">
+
+        <RelativeLayout
+            android:id="@+id/cardHomeProfileTitle"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:elevation="40dp"
+            >
+            <ImageView
+                android:id="@+id/ivProfileTitle"
+                android:transitionName="ivProfileTitle"
+                android:src="@drawable/shape_rv_list_item_rounded_background"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                tools:ignore="ContentDescription"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlQrReaderWrapper"
+            android:transitionName="rlQrReaderWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@+id/cardHomeProfileTitle"
+            android:layout_marginTop="-100dp"
+            android:onClick="@{ (view) -> homeViewModel.onQrScanClick(view) }"
+            android:elevation="30dp"
+            >
+
+            <ImageView
+                android:id="@+id/ivQrReaderHeader"
+                android:transitionName="ivQrReaderHeader"
+                android:src="@drawable/shape_rv_list_item_rounded_background"
+                android:tint="@color/colorPrimary"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                tools:ignore="ContentDescription"
+                />
+
+            <ImageView
+                android:id="@+id/ivQrReaderIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="end"
+                android:layout_marginStart="290dp"
+                android:layout_marginTop="120dp"
+                android:alpha="0.3"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_qr_code"
+                android:tint="@color/colorGreyForIcon" />
+
+            <TextView
+                android:id="@+id/tvQrReaderTitle"
+                android:transitionName="tvQrReaderTitle"
+                android:layout_marginTop="120dp"
+                android:layout_marginStart="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textSize="40sp"
+                android:text="@string/panelQrReaderTitle"
+                tools:text="@string/panelQrReaderTitle"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlReceiptsWrapper"
+            android:transitionName="rlReceiptsWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="-100dp"
+            android:layout_below="@+id/rlQrReaderWrapper"
+            android:onClick="@{ (view) -> homeViewModel.navigateToProductStorage(view) }"
+            android:elevation="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/ivReceiptsHeader"
+                android:transitionName="ivReceiptsHeader"
+                android:src="@drawable/shape_rv_list_item_rounded_background"
+                android:tint="@color/colorPrimaryDark"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                tools:ignore="ContentDescription"
+                />
+
+            <ImageView
+                android:id="@+id/ivReceiptsImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="end"
+                android:layout_marginStart="290dp"
+                android:layout_marginTop="120dp"
+                android:alpha="0.5"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_history"
+                android:tint="@color/colorGreyForIcon" />
+
+            <TextView
+                android:id="@+id/tvReceiptsTitle"
+                android:transitionName="tvReceiptsTitle"
+                android:layout_marginTop="120dp"
+                android:layout_marginStart="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textSize="40sp"
+                android:text="@string/panelStorageTitle"
+                tools:text="@string/panelStorageTitle"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSettingsWrapper"
+            android:transitionName="rlSettingsWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="-100dp"
+            android:layout_below="@+id/rlReceiptsWrapper"
+            >
+
+            <ImageView
+                android:id="@+id/ivSettingsHeader"
+                android:transitionName="ivSettingsHeader"
+                android:src="@drawable/shape_rv_list_item_rounded_background"
+                android:tint="@color/colorPrimaryText"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                tools:ignore="ContentDescription"
+                />
+
+
+            <ImageView
+                android:id="@+id/ivSettingsImage"
+                android:layout_marginTop="120dp"
+                android:layout_marginStart="290dp"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_settings"
+                android:scaleType="fitXY"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:alpha="0.1"
+                android:tint="@color/colorGreyForIcon"
+                />
+
+            <TextView
+                android:id="@+id/tvSettingsTitle"
+                android:transitionName="tvSettingsTitle"
+                android:layout_marginTop="120dp"
+                android:layout_marginStart="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textSize="40sp"
+                android:text="@string/panelSettingsTitle"
+                tools:text="@string/panelSettingsTitle"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:key="kkt_service"
+        app:title="KKT service">
+
+        <EditTextPreference
+            android:icon="@drawable/ic_dashboard"
+            android:key="KEY_KKT_USERNAME"
+            android:title="@string/kkt_name"
+            app:useSimpleSummaryProvider="true"
+            android:dialogTitle="@string/kkt_name"/>
+
+        <EditTextPreference
+            android:icon="@drawable/ic_home"
+            android:key="KEY_KKT_PASSWORD"
+            android:title="@string/kkt_password"
+            app:useSimpleSummaryProvider="true"
+            android:dialogTitle="@string/kkt_password"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="notifications"
+        app:title="Notifications">
+
+        <EditTextPreference
+            android:icon="@drawable/ic_dashboard"
+            android:key="KEY_NOTIF_BASE_TIME"
+            android:title="Базовое время для уведомлений"
+            app:useSimpleSummaryProvider="true"
+            android:dialogTitle="Базовое время для уведомлений (19:00)"/>
+
+        <ListPreference
+            app:key="KEY_NOTIF_FREQ_MODE"
+            app:title="Частота оповещений"
+            app:useSimpleSummaryProvider="true"
+            app:entries="@array/notificationFreqModeTitles"
+            app:entryValues="@array/notificationFreqModeValues"
+            app:dialogTitle="Выберите частоту оповещений"/>
+
+        <EditTextPreference
+            android:icon="@drawable/ic_dashboard"
+            android:key="KEY_NOTIF_NIGHT_START"
+            android:title="Ночное время Начало"
+            app:useSimpleSummaryProvider="true"
+            android:dialogTitle="Ночное время Начало (23:00)"/>
+
+        <EditTextPreference
+            android:icon="@drawable/ic_dashboard"
+            android:key="KEY_NOTIF_NIGHT_END"
+            android:title="Ночное время Конец"
+            app:useSimpleSummaryProvider="true"
+            android:dialogTitle="Ночное время Конец (7:00)"/>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="productStorageViewModel"
+            type="com.hwx.productcare.feature.home.viewmodel.ProductStorageViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:transitionName="rlReceiptsWrapper"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rootHomeLayout"
+        tools:context=".feature.home.ui.fragment.HomeFragment"
+        android:background="#FFFFFF"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rlProductStorageHeader"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:elevation="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/ivProductReceiveTitle"
+                android:transitionName="ivReceiptsHeader"
+                android:src="@drawable/shape_rv_list_item_rounded_background"
+                android:tint="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                tools:ignore="ContentDescription"
+                />
+
+            <TextView
+                android:transitionName="tvReceiptsTitle"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textSize="40sp"
+                android:text="@string/panelStorageTitle"
+                tools:text="@string/panelStorageTitle"/>
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReceipts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="10dp"
+            android:paddingTop="80dp"
+            android:paddingBottom="80dp"
+            android:clipToPadding="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColorPrimary">@color/colorPrimaryText</item>
+        <item name="android:textColorSecondary">@color/colorPrimaryText</item>
+        <item name="android:textViewStyle">@style/TextViewDefault</item>
+        <item name="preferenceTheme">@style/AppTheme.PreferenceThemeOverlay</item>
+    </style>
+
+    <!--    custom layout for prefs layout-->
+    <style name="AppTheme.PreferenceThemeOverlay" parent="@style/PreferenceThemeOverlay">
+        <item name="android:layout">@layout/fragment_settings</item>
+    </style>
+
+    <!--    style for AlertDialog-->
+    <style name="AppCompatAlertDialogStyle" parent="Base.Theme.AppCompat.Dialog">
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textColorPrimary">@color/colorPrimaryText</item>
+        <item name="android:textColorSecondary">@color/colorPrimaryText</item>
+        <item name="android:background">#5fa3d0</item>
+    </style>
+
+    <!--    style for date picker dialog-->
+    <style name="DatePickerDialog" parent="ThemeOverlay.AppCompat.Dialog">
+        <item name="colorAccent">@color/colorPrimaryText</item>                   <!--header background-->
+        <item name="android:windowBackground">@color/colorPrimaryText</item>     <!--calendar background-->
+        <item name="android:colorControlActivated">@color/colorPrimaryDark</item> <!--selected day-->
+        <item name="android:textColorPrimary">@color/colorWhite</item> <!--days of the month-->
+        <item name="android:textColorSecondary">@color/colorWhite</item>    <!--days of the week-->
+    </style>
+
+    <!--    style for text view-->
+    <style name="TextViewDefault" parent="@android:style/TextAppearance.Small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+</resources>

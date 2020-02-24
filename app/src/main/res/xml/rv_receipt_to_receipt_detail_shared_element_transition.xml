@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <transitionSet
+        android:interpolator="@android:interpolator/accelerate_decelerate"
+        android:transitionOrdering="sequential">
+
+        <fade android:fadingMode="fade_out" />
+
+        <transitionSet android:transitionOrdering="together">
+            <changeClipBounds />
+            <changeTransform />
+            <changeBounds />
+
+        </transitionSet>
+
+        <fade android:fadingMode="fade_in" />
+    </transitionSet>
+
+</transitionSet>

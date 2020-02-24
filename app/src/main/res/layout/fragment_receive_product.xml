@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="productReceiveViewModel"
+            type="com.hwx.productcare.feature.kkt.viewmodel.ProductReceiveViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rootHomeLayout"
+        tools:context=".feature.home.ui.fragment.HomeFragment"
+        android:background="#FFFFFF"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rlProductReceiveTitle"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:elevation="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/ivProductReceiveTitle"
+                android:transitionName="ivProductReceiveTitle"
+                android:src="@drawable/shape_rv_list_item_rounded_background"
+                android:tint="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                tools:ignore="ContentDescription"
+                />
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReceivedProducts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="10dp"
+            android:paddingTop="150dp"
+            android:paddingBottom="80dp"
+            android:clipToPadding="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <LinearLayout
+            android:id="@+id/llBottomButtons"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:elevation="30dp"
+            >
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="BACK"
+                tools:text="BACK"
+                 />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save_receipt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="SAVE"
+                />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
